@@ -32,28 +32,11 @@ Other scripts:
 
 Keyboard: arrow keys move. Enter adds the focused letter, or submits when the path is ready. Backspace removes the last letter. Escape pauses.
 
-## Publish on GitHub Pages
+## Play
 
-The production build uses relative asset paths, so it works at `https://USERNAME.github.io/REPOSITORY/` as well as at a domain root. This repository is not published until you push it and the Actions deploy job succeeds.
+The public game is at [https://shreyaambaliya.github.io/word_search_playable/](https://shreyaambaliya.github.io/word_search_playable/).
 
-1. Create a new empty GitHub repository. Do not add a conflicting README if you want a clean first push.
-2. From this project folder:
-
-```bash
-git init
-git add .
-git commit -m "Add Word Shapes, a browser letter-path puzzle"
-git branch -M main
-git remote add origin https://github.com/USERNAME/REPOSITORY.git
-git push -u origin main
-```
-
-3. On GitHub, open **Settings → Pages**.
-4. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-5. Open the **Actions** tab. The "Deploy Word Shapes" workflow runs on every push to `main`. It installs dependencies, validates the levels, builds with Vite, and deploys `dist/` with the official GitHub Pages actions.
-6. When the deploy job is green, the game URL is shown on that job and under **Settings → Pages**. It looks like `https://USERNAME.github.io/REPOSITORY/`.
-
-The workflow file is `.github/workflows/deploy.yml`. GitHub may ask you to approve Actions the first time you use Pages.
+The repository is public. Every push to `main` runs **Deploy Word Shapes** (`.github/workflows/deploy.yml`). That job validates the levels, builds with Vite, and publishes `dist/` to GitHub Pages. The production build uses relative asset paths, so it works at that project URL.
 
 ## Project layout
 
