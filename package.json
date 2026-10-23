@@ -1,0 +1,20 @@
+{
+  "name": "word-shapes",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Word Shapes is a browser letter-grid puzzle. Trace each colored shape to discover the hidden word.",
+  "scripts": {
+    "dev": "vite",
+    "validate": "node scripts/validate-levels.js",
+    "prebuild": "npm run validate",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource/fredoka": "^5.2.8"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}
